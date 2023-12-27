@@ -11,3 +11,4 @@
 </b> <br>
 <p>Below is a screenshot of all four above commands in action</p>
 
+![1  Check Permissions](https://github.com/ThokozaneN/Google-Cybersecurity-Projects/assets/133211908/c6b50655-2f43-49f0-9b76-288ecf9e35ec)
