@@ -12,3 +12,26 @@
 <p>Below is a screenshot of all four above commands in action</p>
 
 ![1  Check Permissions](https://github.com/ThokozaneN/Google-Cybersecurity-Projects/assets/133211908/c6b50655-2f43-49f0-9b76-288ecf9e35ec)
+<br>
+<br>
+<b>Step 2: Description Of The Permission String Used Above</b>
+<p>In the Linux operating system there are three types of permissions, Read, Write & Execute. Files are represented by a 10 character permission string in Linux which is: <pre>drwxrwxrwx - r represnts Read, w represents Write & x represents Execute.</pre></p><br>
+<p>For directories, the string looks like this: <pre>drwxrwxrwx</pre></p>
+<p>The letter d in the string represents directory<pre>[d]rwxrwxrwx</pre></p><br>
+<p>Then the first three letters after d (rwx) represent the user(u)<pre>d[rwx]rwxrwx</pre></p><br>
+<p>The next three letters (rwx) represent the group(g) in your organization. <pre>drwx[rwz]rwx</pre></p><br>
+<p>And the last three letters (rwx) represent other (o) users. <pre>drwxrwx[rwx]</pre></p><br>
+it looks like this for regular files:
+<pre>-rwxrwxrwx. The hyphen(-) represents regular file</pre>
+<br>
+<br>
+<b>Step 3: Change File Permissions</b>
+<p>The organization does not allow "other" to have write access to any files. So I had to check which files grant "others" write permissions and remove or change the permission. We use chmod command to change or remove permissions. In this case, project_k.txt had write permissions but I managed to remove it.</p> <br>
+
+![2  Chmod](https://github.com/ThokozaneN/Google-Cybersecurity-Projects/assets/133211908/49cf26ea-1c8d-419a-afaf-26bb23836626)
+<p>The file project_k.txt has a write primission which is not allowed by the organization (according to policy) so it has to be modified or rather removed. This is the command I used to remove the permission from the file: <pre>chmod o-w project_k.txt</pre></p>
+<pre>The chmod command is used to change permissions, o stands others, w stands for write permission, the hyphen (subtract sign) means we're removing write permission for the project_k.txt file.</pre>
+<br>
+<br>
+<b>Step 4: Change File Permissions on a Hidden File</b>
+<p>The research team has archived .project_x.txt, which is why it’s a hidden file. This file should not have write permissions for anyone, but the user and group should be able to read the file.</p>
