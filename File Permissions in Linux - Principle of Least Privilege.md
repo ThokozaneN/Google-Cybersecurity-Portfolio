@@ -35,3 +35,18 @@ it looks like this for regular files:
 <br>
 <b>Step 4: Change File Permissions on a Hidden File</b>
 <p>The research team has archived .project_x.txt, which is why it’s a hidden file. This file should not have write permissions for anyone, but the user and group should be able to read the file.</p>
+<p>So, given this scenario, to assign the appropriate permissions to a hidden file, we first need to display the hidden file and make sure we do have it under the projects directory.</p> <pre>The command we use to display hidden files under a certain directory (projects, in this case) is: ls -a</pre>
+<p>So, to change and assign appropriate permissions to the hidden file, .project_x.txt, we will use the chmod command. Below is how I changed the permissions</p><pre>chmod u-w,g-w,g+r .project_x.txt</pre>
+
+![3  Hidden](https://github.com/ThokozaneN/Google-Cybersecurity-Projects/assets/133211908/561d8d7e-824e-435c-81b5-ecc53377fecc)
+<p>This will assign appropriate permissions to appropriate users/group, and restrict unathorized access and prevent the file from getting altered or modified.</p>
+<br>
+<br>
+<b>Step 5: Change Directory Permissions </b>
+<p>The files and directories in the projects directory belong to the researcher2 user. Only researcher2 should be allowed to access the drafts directory and its contents. First, we need to use the ls -l or ls -la command to check for permissions assigned to the drafts directory, then use the chmod command to change the permissions. In this case we used: <pre>ls -la (to display permissions assigned to drafts)</pre></p><pre>chmod g-x drafts (to remove the Execute(x) permission from group)</pre></p>
+
+![4  Drafts](https://github.com/ThokozaneN/Google-Cybersecurity-Projects/assets/133211908/7fec2153-6e06-4729-bd40-f500ad422e8a)
+<br>
+<br>
+<h1>Summary</h1>
+<p>In my role as a Linux system administrator and cybersecurity professional, I conducted a comprehensive audit of the organization's file system permissions. I carefully adjusted permissions to grant access only to authorized users, thereby eliminating any unauthorized access points. This strict adherence to the principle of least privilege has significantly carried the organization's security infrastructure, reinforcing its overall posture against potential threats.</p>
